@@ -1,7 +1,9 @@
 -#!/bin/sh
-ssh vasili@192.168.1.201
- cd /var/lib/jenkins/workspace/jenkinst
+ssh vasili@192.168.1.201 <<EOF
+
+ cd /home/vasili/workspace/jenkinst
  git pull
  npm install --production
  pm2 restart all
  exit
+EOF

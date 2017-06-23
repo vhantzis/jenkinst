@@ -19,7 +19,6 @@ describe("SAMPLE unit test",function(){
     .end(function(err,res){
       // HTTP status should be 200
       res.status.should.equal(200);
-      if (response === undefined || response.statusCode != 200){ console.log("there is a prob"); }
       done();
     });
   });
